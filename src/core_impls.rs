@@ -299,10 +299,10 @@ impl_tuple! {
 impl_function_ptrs! {
     "C",
     "Rust",
-   "system",
+    "system",
 }
 
-#[cfg(any(target_arch = "arm", target_arch = "aarch64"))]
+#[cfg(target_arch = "arm")]
 impl_function_ptrs! {
     "aapcs",
 }
