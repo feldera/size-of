@@ -1,8 +1,9 @@
 use crate::{Context, SizeOf};
 use core::fmt::{self, Display};
+use serde::Serialize;
 
 /// Friendlier formatting for byte values
-#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Serialize)]
 #[repr(transparent)]
 pub struct HumanBytes {
     /// The inner bytes
